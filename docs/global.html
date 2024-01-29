@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Global - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3><a href="global.html">Global</a></h3>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Global</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        
+            
+        
+        </h2>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+<h4 class="name" id="QueryOperators">QueryOperators</h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Collection of query operators for MongoDB queries.</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Equal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Equals operator: $eq - Matches values that are equal to a specified value.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.Equal, value: 25 };
+  // This query matches users with age equal to 25</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NotEqual</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Not Equals operator: $ne - Matches values that are not equal to a specified value.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.NotEqual, value: 30 };
+  // This query matches users with age not equal to 30</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GreaterThan</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Greater Than operator: $gt - Matches values that are greater than a specified value.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.GreaterThan, value: 25 };
+  // This query matches users older than 25</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GreaterThanOrEqual</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Greater Than or Equal To operator: $gte - Matches values that are greater than or equal to a specified value.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.GreaterThanOrEqual, value: 25 };
+  // This query matches users aged 25 or older</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LessThan</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Less Than operator: $lt - Matches values that are less than a specified value.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.LessThan, value: 30 };
+  // This query matches users younger than 30</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LessThanOrEqual</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Less Than or Equal To operator: $lte - Matches values that are less than or equal to a specified value.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.LessThanOrEqual, value: 30 };
+  // This query matches users aged 30 or younger</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>In</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">In operator: $in - Matches any of the values specified in an array.
+  <br/>Example:
+  <code><pre>const query = { status: QueryOperators.In, value: ["active", "inactive"] };
+  // This query matches users with "active" or "inactive" status</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NotIn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Not In operator: $nin - Matches values that are not in the specified array.
+  <br/>Example:
+  <code><pre>const query = { status: QueryOperators.NotIn, value: ["inactive"] };
+  // This query matches users not in "inactive" status</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Exists</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Exists operator: $exists - Matches documents that have the specified field.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.Exists, value: true };
+  // This query matches users with an "age" field</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Type operator: $type - Matches documents where the value of a field has a specific BSON data type.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.Type, value: "number" };
+  // This query matches users with "age" as a number</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Modulus</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Modulus operator: $mod - Performs a modulo operation on the value of a field.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.Modulus, value: [2, 1] };
+  // This query matches users with even ages</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Regex</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Regular Expression operator: $regex - Matches documents where a field matches a regular expression pattern.
+  <br/>Example:
+  <code><pre>const query = { name: QueryOperators.Regex, value: /^A/ };
+  // This query matches users with names starting with "A"</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Text</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Text Search operator: $text - Performs a full-text search on a field.
+  <br/>Example:
+  <code><pre>const query = { [QueryOperators.Text]: { $search: "Alice" } };
+  // This query searches for users with "Alice" in their names (requires text index)</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TextOperators</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Text operator: $text - Performs a full-text search on a field.
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Search</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Search property for $text operator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Language</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Language property for $text operator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CaseSensitive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CaseSensitive property for $text operator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DiacriticSensitive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DiacriticSensitive property for $text operator.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Where</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Where operator: $where - Matches documents that satisfy a JavaScript expression.
+  <br/>Example:
+  <code><pre>const query = { [QueryOperators.Where]: "this.age > 25" };
+  // This query matches users with age greater than 25 using a JavaScript expression</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Size</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Size operator: $size - Matches documents where an array field has a specific size.
+  <br/>Example:
+  <code><pre>const query = { name: QueryOperators.Size, value: 5 };
+  // This query matches users with a name of exactly 5 characters</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>All</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">All Elements Match operator: $all - Matches documents where all elements in an array field match a specified condition.
+  <br/>Example:
+  <code><pre>const query = { hobbies: QueryOperators.All, value: ["reading", "swimming"] };
+  // This query matches users with all specified hobbies</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ElemMatch</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Element Match operator: $elemMatch - Matches documents where at least one element in an array field matches a specified condition.
+  <br/>Example:
+  <code><pre>const query = { hobbies: QueryOperators.ElemMatch, value: { [QueryOperators.Equal]: "swimming" } };
+  // This query matches users with "swimming" as one of their hobbies</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Not</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Not operator: $not - Inverts the effect of a query expression.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.Not, value: { [QueryOperators.GreaterThan]: 25 } };
+  // This query matches users with age not greater than 25</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Nor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Nor operator: $nor - Joins query clauses with a logical NOR and selects the documents that fail all the query clauses.
+  <br/>Example:
+  <code><pre>const query = {
+  [QueryOperators.Nor]: [
+    { age: QueryOperators.LessThan, value: 25 },
+    { age: QueryOperators.GreaterThan, value: 30 }
+  ]
+  };
+  // This query matches users who are neither younger than 25 nor older than 30</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Or</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Or operator: $or - Joins query clauses with a logical OR and selects the documents that satisfy at least one of the query clauses.
+  <br/>Example:
+  <code><pre>const query = {
+  [QueryOperators.Or]: [
+    { age: QueryOperators.Equal, value: 25 },
+    { age: QueryOperators.Equal, value: 30 }
+  ]
+  };
+  // This query matches users who are either aged 25 or aged 30</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>And</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">And operator: $and - Joins query clauses with a logical AND and selects the documents that satisfy all the query clauses.
+  <br/>Example:
+  <code><pre>const query = {
+  [QueryOperators.And]: [
+    { age: QueryOperators.GreaterThanOrEqual, value: 22 },
+    { status: QueryOperators.Equal, value: "active" }
+  ]
+  };
+  // This query matches users who are aged 22 and have "active" status</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GeoWithin</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">GeoWithin operator: $geoWithin - Matches documents that are within a specified geometry.
+  <br/>Example:
+  <code><pre>const query = {
+  location: {
+    [QueryOperators.GeoWithin]: {
+      [QueryOperators.Geometry]: {
+        type: "Polygon",
+        coordinates: [ // Polygon coordinates ]
+      }
+    }
+  }
+  };</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GeoIntersects</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">GeoIntersects operator: $geoIntersects - Matches documents that intersect with a specified geometry.
+  <br/>Example:
+  <code><pre>const query = {
+  location: {
+    [QueryOperators.GeoIntersects]: {
+      [QueryOperators.Geometry]: {
+        type: "Point",
+        coordinates: [ // Point coordinates ]
+      }
+    }
+  }
+  };</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Near</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Near operator: $near - Returns geospatial objects in proximity to a specified point.
+  <br/>Example:
+  <code><pre>const query = {
+  location: {
+    $near: {
+      [QueryOperators.Geometry]: {
+        type: "Point",
+        coordinates: [ // Point coordinates ]
+      },
+      $maxDistance: 1000 // Maximum distance in meters
+    }
+  }
+  };</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NearSphere</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Near Sphere operator: $nearSphere - Returns geospatial objects in proximity to a specified point on a sphere.
+  <br/>Example:
+  <code><pre>const query = {
+  location: {
+    [QueryOperators.NearSphere]: {
+      [QueryOperators.Geometry]: {
+        type: "Point",
+        coordinates: [ // Point coordinates ]
+      },
+      $maxDistance: 1000 // Maximum distance in radians
+    }
+  }
+  };</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Geometry</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Geometry operator: $geometry - Defines a geospatial shape for use with the $geoWithin and $geoIntersects operators.
+  <br/>Example:
+  <code><pre>const geometry = {
+  type: "Polygon",
+  coordinates: [ // Polygon coordinates ]
+  };</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CenterSphere</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Center Sphere operator: $centerSphere - Defines a circle on a sphere for use with the $geoWithin and $geoIntersects operators.
+  <br/>Example:
+  <code><pre>const circle = {
+  center: [ // Center coordinates ],
+  radius: 1000 // Radius in radians
+  };</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Box</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Box operator: $box - Defines a rectangle for use with the $geoWithin and $geoIntersects operators.
+  <br/>Example:
+  <code><pre>const query = {
+  location: {
+    [QueryOperators.GeoWithin]: {
+      [QueryOperators.Box]: [
+        [10, 20], // Bottom-left corner coordinates
+        [30, 40]  // Top-right corner coordinates
+      ]
+    }
+  }
+  };
+  // This query matches locations within the specified rectangle (requires geospatial data)</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Polygon</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Polygon operator: $polygon - Defines a polygon for use with the $geoWithin and $geoIntersects operators.
+  <br/>Example:
+  <code><pre>const query = {
+  location: {
+    [QueryOperators.GeoWithin]: {
+      [QueryOperators.Polygon]: [
+        [0, 0],   // Vertex 1 coordinates
+        [0, 10],  // Vertex 2 coordinates
+        [10, 10]  // Vertex 3 coordinates
+      ]
+    }
+  }
+  };
+  // This query matches locations within the specified polygon (requires geospatial data)</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UniqueDocs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Unique Documents operator: $uniqueDocs - Specifies that the results of a geospatial query should include only one of each distinct document.
+  <br/>Example:
+  <code><pre>const query = { age: QueryOperators.UniqueDocs, value: true };
+  // This query returns unique documents based on geospatial query results</pre></code></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Comment</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Comment operator: $comment - Adds a comment to a query to help with debugging or profiling.
+  <br/>Example:
+  <code><pre>const query = {
+  age: QueryOperators.Equal,
+  value: 25,
+  [QueryOperators.Comment]: "Find users with age equal to 25"
+  };
+  // This query adds a comment for documentation or profiling purposes</pre></code></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<div class="description usertext">
+    Collection of query operators for MongoDB queries.
+</div>
+
+
+
+    <h5 class="h5-types">Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+            
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Mon Jan 29 2024 01:02:17 GMT-0800 (Pacific Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

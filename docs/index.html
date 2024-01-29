@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3><a href="global.html">Global</a></h3>
+    
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+    <section class="package">
+        <h3> </h3>		
+    </section>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <section class="readme usertext">
+        <article><h1>mongodb-query-operators</h1>
+<p><img src="https://github.com/shadiabuhilal/mongodb-query-operators/actions/workflows/push-workflows.yml/badge.svg" alt="Build Status"></p>
+<p>MongoDB query operators helper</p>
+<p>https://shadiabuhilal.github.io/mongodb-query-operators/</p>
+<hr>
+<h2>Usage</h2>
+<h3>import mongodb-query-operators</h3>
+<pre class="prettyprint source lang-js"><code>import { QueryOperators } from 'mongodb-query-operators';
+</code></pre>
+<p>Or</p>
+<h3>require mongodb-query-operators</h3>
+<pre class="prettyprint source lang-js"><code>const { QueryOperators } = require('mongodb-query-operators');
+</code></pre>
+<hr>
+<h3>Available Query Operations</h3>
+<p>Support query operations that used in MongoDB.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QueryOperators.LessThan</td>
+<td><code>$lt</code></td>
+<td>Less than</td>
+</tr>
+<tr>
+<td>QueryOperators.LessThanOrEqual</td>
+<td><code>$lte</code></td>
+<td>Less than or equal to</td>
+</tr>
+<tr>
+<td>QueryOperators.Equal</td>
+<td><code>$eq</code></td>
+<td>Equal to</td>
+</tr>
+<tr>
+<td>QueryOperators.NotEqual</td>
+<td><code>$ne</code></td>
+<td>Not equal to</td>
+</tr>
+<tr>
+<td>QueryOperators.GreaterThan</td>
+<td><code>$gt</code></td>
+<td>Greater than</td>
+</tr>
+<tr>
+<td>QueryOperators.GreaterThanOrEqual</td>
+<td><code>$gte</code></td>
+<td>Greater than or equal to</td>
+</tr>
+<tr>
+<td>QueryOperators.In</td>
+<td><code>$in</code></td>
+<td>In</td>
+</tr>
+<tr>
+<td>QueryOperators.NotIn</td>
+<td><code>$nin</code></td>
+<td>Not In</td>
+</tr>
+<tr>
+<td>QueryOperators.Exists</td>
+<td><code>$exists</code></td>
+<td>Exists</td>
+</tr>
+<tr>
+<td>QueryOperators.Type</td>
+<td><code>$type</code></td>
+<td>Type</td>
+</tr>
+<tr>
+<td>QueryOperators.Modulus</td>
+<td><code>$mod</code></td>
+<td>Modulus</td>
+</tr>
+<tr>
+<td>QueryOperators.Regex</td>
+<td><code>$regex</code></td>
+<td>Regular Expression</td>
+</tr>
+<tr>
+<td>QueryOperators.Text</td>
+<td><code>$text</code></td>
+<td>Text Search</td>
+</tr>
+<tr>
+<td>QueryOperators.TextOperators.Search</td>
+<td><code>$search</code></td>
+<td>Text Search - Search</td>
+</tr>
+<tr>
+<td>QueryOperators.TextOperators.Language</td>
+<td><code>$language</code></td>
+<td>Text Search - Language</td>
+</tr>
+<tr>
+<td>QueryOperators.TextOperators.CaseSensitive</td>
+<td><code>$caseSensitive</code></td>
+<td>Text Search - Case Sensitive</td>
+</tr>
+<tr>
+<td>QueryOperators.TextOperators.DiacriticSensitive</td>
+<td><code>$diacriticSensitive</code></td>
+<td>Text Search - Diacritic Sensitive</td>
+</tr>
+<tr>
+<td>QueryOperators.Where</td>
+<td><code>$where</code></td>
+<td>Where</td>
+</tr>
+<tr>
+<td>QueryOperators.Size</td>
+<td><code>$size</code></td>
+<td>Size</td>
+</tr>
+<tr>
+<td>QueryOperators.All</td>
+<td><code>$all</code></td>
+<td>All Elements Match</td>
+</tr>
+<tr>
+<td>QueryOperators.ElemMatch</td>
+<td><code>$elemMatch</code></td>
+<td>Element Match</td>
+</tr>
+<tr>
+<td>QueryOperators.Not</td>
+<td><code>$not</code></td>
+<td>Not</td>
+</tr>
+<tr>
+<td>QueryOperators.Nor</td>
+<td><code>$nor</code></td>
+<td>Nor</td>
+</tr>
+<tr>
+<td>QueryOperators.Or</td>
+<td><code>$or</code></td>
+<td>Or</td>
+</tr>
+<tr>
+<td>QueryOperators.And</td>
+<td><code>$and</code></td>
+<td>And</td>
+</tr>
+<tr>
+<td>QueryOperators.GeoWithin</td>
+<td><code>$geoWithin</code></td>
+<td>GeoWithin</td>
+</tr>
+<tr>
+<td>QueryOperators.GeoIntersects</td>
+<td><code>$geoIntersects</code></td>
+<td>GeoIntersects</td>
+</tr>
+<tr>
+<td>QueryOperators.Near</td>
+<td><code>$near</code></td>
+<td>Near</td>
+</tr>
+<tr>
+<td>QueryOperators.NearSphere</td>
+<td><code>$nearSphere</code></td>
+<td>Near Sphere</td>
+</tr>
+<tr>
+<td>QueryOperators.Geometry</td>
+<td><code>$geometry</code></td>
+<td>Geometry</td>
+</tr>
+<tr>
+<td>QueryOperators.CenterSphere</td>
+<td><code>$centerSphere</code></td>
+<td>Center Sphere</td>
+</tr>
+<tr>
+<td>QueryOperators.Box</td>
+<td><code>$box</code></td>
+<td>Box</td>
+</tr>
+<tr>
+<td>QueryOperators.Polygon</td>
+<td><code>$polygon</code></td>
+<td>Polygon</td>
+</tr>
+<tr>
+<td>QueryOperators.UniqueDocs</td>
+<td><code>$uniqueDocs</code></td>
+<td>Unique Documents</td>
+</tr>
+<tr>
+<td>QueryOperators.Comment</td>
+<td><code>$comment</code></td>
+<td>Comment</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://www.mongodb.com/docs/manual/reference/operator/query/">MongoDB query operations doc</a>.</p></article>
+    </section>
+
+
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Mon Jan 29 2024 01:02:17 GMT-0800 (Pacific Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

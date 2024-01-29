@@ -1,114 +1,161 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>index.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3><a href="global.html">Global</a></h3>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">index.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * Collection of query operators for MongoDB queries.
  *
  * @typedef {Object} QueryOperators
  * @property {string} Equal - Equals operator: $eq - Matches values that are equal to a specified value.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.Equal, value: 25 };
- *   // This query matches users with age equal to 25</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.Equal, value: 25 };
+ *   // This query matches users with age equal to 25&lt;/pre>&lt;/code>
  * @property {string} NotEqual - Not Equals operator: $ne - Matches values that are not equal to a specified value.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.NotEqual, value: 30 };
- *   // This query matches users with age not equal to 30</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.NotEqual, value: 30 };
+ *   // This query matches users with age not equal to 30&lt;/pre>&lt;/code>
  * @property {string} GreaterThan - Greater Than operator: $gt - Matches values that are greater than a specified value.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.GreaterThan, value: 25 };
- *   // This query matches users older than 25</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.GreaterThan, value: 25 };
+ *   // This query matches users older than 25&lt;/pre>&lt;/code>
  * @property {string} GreaterThanOrEqual - Greater Than or Equal To operator: $gte - Matches values that are greater than or equal to a specified value.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.GreaterThanOrEqual, value: 25 };
- *   // This query matches users aged 25 or older</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.GreaterThanOrEqual, value: 25 };
+ *   // This query matches users aged 25 or older&lt;/pre>&lt;/code>
  * @property {string} LessThan - Less Than operator: $lt - Matches values that are less than a specified value.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.LessThan, value: 30 };
- *   // This query matches users younger than 30</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.LessThan, value: 30 };
+ *   // This query matches users younger than 30&lt;/pre>&lt;/code>
  * @property {string} LessThanOrEqual - Less Than or Equal To operator: $lte - Matches values that are less than or equal to a specified value.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.LessThanOrEqual, value: 30 };
- *   // This query matches users aged 30 or younger</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.LessThanOrEqual, value: 30 };
+ *   // This query matches users aged 30 or younger&lt;/pre>&lt;/code>
  * @property {string} In - In operator: $in - Matches any of the values specified in an array.
- *   <br/>Example:
- *   <code><pre>const query = { status: QueryOperators.In, value: ["active", "inactive"] };
- *   // This query matches users with "active" or "inactive" status</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { status: QueryOperators.In, value: ["active", "inactive"] };
+ *   // This query matches users with "active" or "inactive" status&lt;/pre>&lt;/code>
  * @property {string} NotIn - Not In operator: $nin - Matches values that are not in the specified array.
- *   <br/>Example:
- *   <code><pre>const query = { status: QueryOperators.NotIn, value: ["inactive"] };
- *   // This query matches users not in "inactive" status</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { status: QueryOperators.NotIn, value: ["inactive"] };
+ *   // This query matches users not in "inactive" status&lt;/pre>&lt;/code>
  * @property {string} Exists - Exists operator: $exists - Matches documents that have the specified field.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.Exists, value: true };
- *   // This query matches users with an "age" field</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.Exists, value: true };
+ *   // This query matches users with an "age" field&lt;/pre>&lt;/code>
  * @property {string} Type - Type operator: $type - Matches documents where the value of a field has a specific BSON data type.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.Type, value: "number" };
- *   // This query matches users with "age" as a number</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.Type, value: "number" };
+ *   // This query matches users with "age" as a number&lt;/pre>&lt;/code>
  * @property {string} Modulus - Modulus operator: $mod - Performs a modulo operation on the value of a field.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.Modulus, value: [2, 1] };
- *   // This query matches users with even ages</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.Modulus, value: [2, 1] };
+ *   // This query matches users with even ages&lt;/pre>&lt;/code>
  * @property {string} Regex - Regular Expression operator: $regex - Matches documents where a field matches a regular expression pattern.
- *   <br/>Example:
- *   <code><pre>const query = { name: QueryOperators.Regex, value: /^A/ };
- *   // This query matches users with names starting with "A"</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { name: QueryOperators.Regex, value: /^A/ };
+ *   // This query matches users with names starting with "A"&lt;/pre>&lt;/code>
  * @property {string} Text - Text Search operator: $text - Performs a full-text search on a field.
- *   <br/>Example:
- *   <code><pre>const query = { [QueryOperators.Text]: { $search: "Alice" } };
- *   // This query searches for users with "Alice" in their names (requires text index)</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { [QueryOperators.Text]: { $search: "Alice" } };
+ *   // This query searches for users with "Alice" in their names (requires text index)&lt;/pre>&lt;/code>
  * @property {Object} TextOperators - Text operator: $text - Performs a full-text search on a field.
  * @property {string} TextOperators.Search - Search property for $text operator.
  * @property {string} TextOperators.Language - Language property for $text operator.
  * @property {string} TextOperators.CaseSensitive - CaseSensitive property for $text operator.
  * @property {string} TextOperators.DiacriticSensitive - DiacriticSensitive property for $text operator.
  * @property {string} Where - Where operator: $where - Matches documents that satisfy a JavaScript expression.
- *   <br/>Example:
- *   <code><pre>const query = { [QueryOperators.Where]: "this.age > 25" };
- *   // This query matches users with age greater than 25 using a JavaScript expression</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { [QueryOperators.Where]: "this.age > 25" };
+ *   // This query matches users with age greater than 25 using a JavaScript expression&lt;/pre>&lt;/code>
  * @property {string} Size - Size operator: $size - Matches documents where an array field has a specific size.
- *   <br/>Example:
- *   <code><pre>const query = { name: QueryOperators.Size, value: 5 };
- *   // This query matches users with a name of exactly 5 characters</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { name: QueryOperators.Size, value: 5 };
+ *   // This query matches users with a name of exactly 5 characters&lt;/pre>&lt;/code>
  * @property {string} All - All Elements Match operator: $all - Matches documents where all elements in an array field match a specified condition.
- *   <br/>Example:
- *   <code><pre>const query = { hobbies: QueryOperators.All, value: ["reading", "swimming"] };
- *   // This query matches users with all specified hobbies</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { hobbies: QueryOperators.All, value: ["reading", "swimming"] };
+ *   // This query matches users with all specified hobbies&lt;/pre>&lt;/code>
  * @property {string} ElemMatch - Element Match operator: $elemMatch - Matches documents where at least one element in an array field matches a specified condition.
- *   <br/>Example:
- *   <code><pre>const query = { hobbies: QueryOperators.ElemMatch, value: { [QueryOperators.Equal]: "swimming" } };
- *   // This query matches users with "swimming" as one of their hobbies</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { hobbies: QueryOperators.ElemMatch, value: { [QueryOperators.Equal]: "swimming" } };
+ *   // This query matches users with "swimming" as one of their hobbies&lt;/pre>&lt;/code>
  * @property {string} Not - Not operator: $not - Inverts the effect of a query expression.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.Not, value: { [QueryOperators.GreaterThan]: 25 } };
- *   // This query matches users with age not greater than 25</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.Not, value: { [QueryOperators.GreaterThan]: 25 } };
+ *   // This query matches users with age not greater than 25&lt;/pre>&lt;/code>
  * @property {string} Nor - Nor operator: $nor - Joins query clauses with a logical NOR and selects the documents that fail all the query clauses.
- *   <br/>Example:
- *   <code><pre>const query = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = {
  *   [QueryOperators.Nor]: [
  *     { age: QueryOperators.LessThan, value: 25 },
  *     { age: QueryOperators.GreaterThan, value: 30 }
  *   ]
  *   };
- *   // This query matches users who are neither younger than 25 nor older than 30</pre></code>
+ *   // This query matches users who are neither younger than 25 nor older than 30&lt;/pre>&lt;/code>
  * @property {string} Or - Or operator: $or - Joins query clauses with a logical OR and selects the documents that satisfy at least one of the query clauses.
- *   <br/>Example:
- *   <code><pre>const query = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = {
  *   [QueryOperators.Or]: [
  *     { age: QueryOperators.Equal, value: 25 },
  *     { age: QueryOperators.Equal, value: 30 }
  *   ]
  *   };
- *   // This query matches users who are either aged 25 or aged 30</pre></code>
+ *   // This query matches users who are either aged 25 or aged 30&lt;/pre>&lt;/code>
  * @property {string} And - And operator: $and - Joins query clauses with a logical AND and selects the documents that satisfy all the query clauses.
- *   <br/>Example:
- *   <code><pre>const query = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = {
  *   [QueryOperators.And]: [
  *     { age: QueryOperators.GreaterThanOrEqual, value: 22 },
  *     { status: QueryOperators.Equal, value: "active" }
  *   ]
  *   };
- *   // This query matches users who are aged 22 and have "active" status</pre></code>
+ *   // This query matches users who are aged 22 and have "active" status&lt;/pre>&lt;/code>
  * @property {string} GeoWithin - GeoWithin operator: $geoWithin - Matches documents that are within a specified geometry.
- *   <br/>Example:
- *   <code><pre>const query = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = {
  *   location: {
  *     [QueryOperators.GeoWithin]: {
  *       [QueryOperators.Geometry]: {
@@ -117,10 +164,10 @@
  *       }
  *     }
  *   }
- *   };</pre></code>
+ *   };&lt;/pre>&lt;/code>
  * @property {string} GeoIntersects - GeoIntersects operator: $geoIntersects - Matches documents that intersect with a specified geometry.
- *   <br/>Example:
- *   <code><pre>const query = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = {
  *   location: {
  *     [QueryOperators.GeoIntersects]: {
  *       [QueryOperators.Geometry]: {
@@ -129,10 +176,10 @@
  *       }
  *     }
  *   }
- *   };</pre></code>
+ *   };&lt;/pre>&lt;/code>
  * @property {string} Near - Near operator: $near - Returns geospatial objects in proximity to a specified point.
- *   <br/>Example:
- *   <code><pre>const query = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = {
  *   location: {
  *     $near: {
  *       [QueryOperators.Geometry]: {
@@ -142,10 +189,10 @@
  *       $maxDistance: 1000 // Maximum distance in meters
  *     }
  *   }
- *   };</pre></code>
+ *   };&lt;/pre>&lt;/code>
  * @property {string} NearSphere - Near Sphere operator: $nearSphere - Returns geospatial objects in proximity to a specified point on a sphere.
- *   <br/>Example:
- *   <code><pre>const query = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = {
  *   location: {
  *     [QueryOperators.NearSphere]: {
  *       [QueryOperators.Geometry]: {
@@ -155,22 +202,22 @@
  *       $maxDistance: 1000 // Maximum distance in radians
  *     }
  *   }
- *   };</pre></code>
+ *   };&lt;/pre>&lt;/code>
  * @property {string} Geometry - Geometry operator: $geometry - Defines a geospatial shape for use with the $geoWithin and $geoIntersects operators.
- *   <br/>Example:
- *   <code><pre>const geometry = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const geometry = {
  *   type: "Polygon",
  *   coordinates: [ // Polygon coordinates ]
- *   };</pre></code>
+ *   };&lt;/pre>&lt;/code>
  * @property {string} CenterSphere - Center Sphere operator: $centerSphere - Defines a circle on a sphere for use with the $geoWithin and $geoIntersects operators.
- *   <br/>Example:
- *   <code><pre>const circle = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const circle = {
  *   center: [ // Center coordinates ],
  *   radius: 1000 // Radius in radians
- *   };</pre></code>
+ *   };&lt;/pre>&lt;/code>
  * @property {string} Box - Box operator: $box - Defines a rectangle for use with the $geoWithin and $geoIntersects operators.
- *   <br/>Example:
- *   <code><pre>const query = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = {
  *   location: {
  *     [QueryOperators.GeoWithin]: {
  *       [QueryOperators.Box]: [
@@ -180,10 +227,10 @@
  *     }
  *   }
  *   };
- *   // This query matches locations within the specified rectangle (requires geospatial data)</pre></code>
+ *   // This query matches locations within the specified rectangle (requires geospatial data)&lt;/pre>&lt;/code>
  * @property {string} Polygon - Polygon operator: $polygon - Defines a polygon for use with the $geoWithin and $geoIntersects operators.
- *   <br/>Example:
- *   <code><pre>const query = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = {
  *   location: {
  *     [QueryOperators.GeoWithin]: {
  *       [QueryOperators.Polygon]: [
@@ -194,19 +241,19 @@
  *     }
  *   }
  *   };
- *   // This query matches locations within the specified polygon (requires geospatial data)</pre></code>
+ *   // This query matches locations within the specified polygon (requires geospatial data)&lt;/pre>&lt;/code>
  * @property {string} UniqueDocs - Unique Documents operator: $uniqueDocs - Specifies that the results of a geospatial query should include only one of each distinct document.
- *   <br/>Example:
- *   <code><pre>const query = { age: QueryOperators.UniqueDocs, value: true };
- *   // This query returns unique documents based on geospatial query results</pre></code>
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = { age: QueryOperators.UniqueDocs, value: true };
+ *   // This query returns unique documents based on geospatial query results&lt;/pre>&lt;/code>
  * @property {string} Comment - Comment operator: $comment - Adds a comment to a query to help with debugging or profiling.
- *   <br/>Example:
- *   <code><pre>const query = {
+ *   &lt;br/>Example:
+ *   &lt;code>&lt;pre>const query = {
  *   age: QueryOperators.Equal,
  *   value: 25,
  *   [QueryOperators.Comment]: "Find users with age equal to 25"
  *   };
- *   // This query adds a comment for documentation or profiling purposes</pre></code>
+ *   // This query adds a comment for documentation or profiling purposes&lt;/pre>&lt;/code>
  */
 export const QueryOperators = Object.freeze({
     Equal: '$eq',
@@ -247,3 +294,28 @@ export const QueryOperators = Object.freeze({
     UniqueDocs: '$uniqueDocs',
     Comment: '$comment'
 });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Mon Jan 29 2024 01:02:17 GMT-0800 (Pacific Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

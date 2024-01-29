@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Collection of query operators for MongoDB queries.
  *
@@ -208,7 +210,7 @@
  *   };
  *   // This query adds a comment for documentation or profiling purposes</pre></code>
  */
-export const QueryOperators = Object.freeze({
+const QueryOperators = Object.freeze({
     Equal: '$eq',
     NotEqual: '$ne',
     GreaterThan: '$gt',
@@ -247,3 +249,5 @@ export const QueryOperators = Object.freeze({
     UniqueDocs: '$uniqueDocs',
     Comment: '$comment'
 });
+
+exports.QueryOperators = QueryOperators;
