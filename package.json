@@ -1,0 +1,81 @@
+{
+  "name": "mongodb-query-operators",
+  "version": "1.0.0",
+  "description": "MongoDB query operators helper",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+        "import": "./index.js",
+        "require": "./index.cjs",
+        "types": "./types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "c8 mocha ./tests/index.spec.js",
+    "buildcjs": "npx rollup ./index.js --file ./index.cjs --format cjs",
+    "build": "npm run buildcjs",
+    "postbuild": "npm run buildtypes",
+    "buildtypes": "tsc",
+    "postbuildtypes": "npm run document",
+    "document": "jsdoc ./index.js -c .jsdoc.json -d ./docs -R README.md -p",
+    "commit": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shadiabuhilal/mongodb-query-operators.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "mongodb",
+    "mongo",
+    "db",
+    "query",
+    "operations",
+    "mongodb query operations",
+    "react",
+    "express",
+    "express js",
+    "js",
+    "next",
+    "next js",
+    "server",
+    "node",
+    "node js",
+    "module",
+    "commonJS",
+    "cjs",
+    "typescript",
+    "ts"
+  ],
+  "author": "Shadi Abu Hilal <shadiabuhilal@gmail.com> (http://github.com/shadiabuhilal)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shadiabuhilal/mongodb-query-operators/issues"
+  },
+  "homepage": "https://github.com/shadiabuhilal/mongodb-query-operators#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "c8": "^8.0.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "docdash": "^2.0.2",
+    "eslint": "^8.55.0",
+    "expect.js": "^0.3.1",
+    "jsdoc": "^4.0.2",
+    "mocha": "^10.2.0",
+    "rollup": "^4.6.1",
+    "semantic-release": "^22.0.10",
+    "typescript": "^5.3.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
